@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}
+Translate
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Translation service</h1>
+    <div>Enter the text you wish to translate, choose the language, and click Translate!</div>
+    <div>
+        <form method="POST">
+            <div class="form-group">
+                <textarea name="text" cols="20" rows="10" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="language">Language:</label>
+                <select name="language" class="form-control">
+                    <option value="en">English</option>
+                    <option value="ar">Arabic</option>
+                    <option value="fr">French</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-success">Translate!</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
